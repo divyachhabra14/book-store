@@ -4,6 +4,7 @@ import com.bookstore.model.User;
 import com.bookstore.service.IAuthenticationService;
 import com.bookstore.service.IUserService;
 
+import com.bookstore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class AuthenticationController {
     private IAuthenticationService authenticationService;
 	
 	@Autowired
-    private IUserService userService;
+    private UserService userService;
 
     @PostMapping("sign-up")
     public ResponseEntity<?> signUp(@RequestBody User user)

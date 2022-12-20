@@ -4,6 +4,7 @@ import com.bookstore.model.PurchaseHistory;
 import com.bookstore.security.UserPrincipal;
 import com.bookstore.service.IPurchaseHistoryService;
 
+import com.bookstore.service.PurchaseHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class PurchaseHistoryController
 {
 	@Autowired
-    private IPurchaseHistoryService purchaseHistoryService;
+    private PurchaseHistoryService purchaseHistoryService;
 
     @PostMapping //api/purchase-history
     public ResponseEntity<?> savePurchaseHistory(@RequestBody PurchaseHistory purchaseHistory)

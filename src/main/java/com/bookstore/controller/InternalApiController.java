@@ -2,6 +2,7 @@ package com.bookstore.controller;
 
 import com.bookstore.service.IUserService;
 
+import com.bookstore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class InternalApiController
 {
 	@Autowired
-    private IUserService userService;
+    private UserService userService;
 
     @PutMapping("make-admin/{username}") //api/internal/make-admin/{username}
     public ResponseEntity<?> makeAdmin(@PathVariable String username)
